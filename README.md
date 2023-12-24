@@ -1,1 +1,1 @@
-# reorganise-_product_to_odoo
+# reorganise_product_to_odoo
