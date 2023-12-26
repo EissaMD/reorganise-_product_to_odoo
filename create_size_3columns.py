@@ -31,4 +31,4 @@ for index in data.index:
 data.insert(3,"Width"       ,new_columns["Width"])
 data.insert(4,"Aspect Ratio",new_columns["Aspect Ratio"])
 data.insert(5,"Rim"         ,new_columns["Rim"])
-data.to_excel(file_name+'_output.xlsx')
+data.to_excel(file_name+'_with_sizes.xlsx', index=False)

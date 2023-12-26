@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the Excel file into a pandas DataFrame
-file_name = "p2"
+file_name = "p2_with_sizes"
 df = pd.read_excel(file_name+'.xlsx')
 
 # Create a dictionary to store unique values for each column
@@ -17,7 +17,7 @@ data = {
 }
 # Print or use the unique columns dictionary
 for column, unique_values in unique_columns_dict.items():
-    if column in ("Product Name (EN)","Product Name (AR)",):
+    if column in ("Product Name (EN)","Product Name (AR)"):
         continue
     first_value = unique_values.pop()
     data["Attribute"].append(column)
@@ -27,4 +27,4 @@ for column, unique_values in unique_columns_dict.items():
         data["Values/Value"].append(value)
 
 df = pd.DataFrame(data)
-df.to_excel(file_name+'_attribute.xlsx')
+df.to_excel(file_name+'_attribute.xlsx', index=False)
